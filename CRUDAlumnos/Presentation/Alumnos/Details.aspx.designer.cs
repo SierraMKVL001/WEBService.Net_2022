@@ -114,22 +114,13 @@ namespace Presentation.Alumnos
         protected global::System.Web.UI.WebControls.Label lblEstts;
 
         /// <summary>
-        /// Control btnCalIMSS.
+        /// Control btnOpenPopUp.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCalIMSS;
-
-        /// <summary>
-        /// Control btnCalISR.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCalISR;
+        protected global::System.Web.UI.WebControls.Button btnOpenPopUp;
 
         /// <summary>
         /// Control HyperLink1.
@@ -139,6 +130,24 @@ namespace Presentation.Alumnos
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+
+        /// <summary>
+        /// Control lblHidden.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblHidden;
+
+        /// <summary>
+        /// Control mpePopUp.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ModalPopupExtender mpePopUp;
 
         /// <summary>
         /// Control lblLiminf.
@@ -186,15 +195,6 @@ namespace Presentation.Alumnos
         protected global::System.Web.UI.WebControls.Label lblSubsid;
 
         /// <summary>
-        /// Control lblExced.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblExced;
-
-        /// <summary>
         /// Control lblImpuest.
         /// </summary>
         /// <remarks>
@@ -202,6 +202,15 @@ namespace Presentation.Alumnos
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblImpuest;
+
+        /// <summary>
+        /// Control btnCloseModal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCloseModal;
 
         /// <summary>
         /// Control lblEnfMat.

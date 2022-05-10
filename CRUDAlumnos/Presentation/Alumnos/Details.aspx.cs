@@ -70,17 +70,6 @@ namespace Presentation.Alumnos
                 lblEstts.Text = estatus.Nombre.ToString();
             }
         }
-
-        protected void btnCalISR_Click(object sender, EventArgs e)
-        {
-            
-           decimal sueldo=Convert.ToDecimal(lblSueldo.Text);
-            _itemISR=_nitemISR.CalcularISR(sueldo);
-            decimal sueldQ = sueldo / 2;
-            _ISRResult=_nISRResult.Calcular(_itemISR,sueldQ);
-            LlenarDISR();
-
-        }
         public void LlenarDISR()
         {
             lblLiminf.Text=_itemISR.LimInf.ToString();
@@ -88,23 +77,47 @@ namespace Presentation.Alumnos
             lblCuotFij.Text=_itemISR.CuotaFija.ToString();
             excedLimInf.Text=_itemISR.PorExced.ToString();
             lblSubsid.Text=_itemISR.Subcidio.ToString();
-            lblExced.Text=_ISRResult.Escedente.ToString();
             lblImpuest.Text=_ISRResult.Impuesto.ToString();
         }
 
-        protected void btnCalIMSS_Click(object sender, EventArgs e)
+        //protected void btnCalIMSS_Click(object sender, EventArgs e)
+        //{
+        //    decimal sueldo = Convert.ToDecimal(lblSueldo.Text);
+        //    _Imss = _nimss.Calcular(sueldo);
+        //    LlenarDIMSS();
+        //}
+        //public void LlenarDIMSS()
+        //{
+        //    lblEnfMat.Text=_Imss.EnfyMat.ToString();
+        //    lblInvyVid.Text=_Imss.InvyVid.ToString();
+        //    lblRetiro.Text=_Imss.Retiro.ToString();
+        //    lblCesantia.Text=_Imss.Cesantia.ToString();
+        //    lblInfona.Text=_Imss.CreditoInf.ToString();
+        //}
+
+        protected void btnOpenPopUp_Click(object sender, EventArgs e)
         {
             decimal sueldo = Convert.ToDecimal(lblSueldo.Text);
-            _Imss = _nimss.Calcular(sueldo);
-            LlenarDIMSS();
+            int id = Convert.ToInt32(lblId.Text);
+
+            try
+            {
+                _itemISR = _nitemISR.WebCalcularISR(id);
+
+            }
+            catch (Exception ex)
+            {
+                _itemISR = _nitemISR.CalcularISR(id);
+            }
+            decimal sueldQ = sueldo / 2;
+            _ISRResult = _nISRResult.Calcular(_itemISR, sueldQ);
+            LlenarDISR();
+            mpePopUp.Show();
         }
-        public void LlenarDIMSS()
+
+        protected void btnOk_Click(object sender, EventArgs e)
         {
-            lblEnfMat.Text=_Imss.EnfyMat.ToString();
-            lblInvyVid.Text=_Imss.InvyVid.ToString();
-            lblRetiro.Text=_Imss.Retiro.ToString();
-            lblCesantia.Text=_Imss.Cesantia.ToString();
-            lblInfona.Text=_Imss.CreditoInf.ToString();
+            mpePopUp.Hide();
         }
     }
 }
